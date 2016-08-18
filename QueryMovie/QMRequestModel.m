@@ -14,7 +14,10 @@
     return [[JSONKeyMapper alloc] initWithDictionary:@{
                                                        @"query": @"query",
                                                        @"page": @"page",
-                                                       @"primary_release_year": @"year"}];
+                                                       @"primary_release_year": @"year",
+                                                       @"sort_by": @"sortBy",
+                                                       @"vote_count.gte": @"voteCountGreat"
+                                                       }];
 }
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName {

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -31,8 +32,7 @@
                                         <exclude reference="MKe-z4-hS7"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="40" width="320" height="22"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="MKe-z4-hS7"/>
                                     </mask>
@@ -50,8 +50,7 @@
                                         <exclude reference="Q8J-Sg-bUA"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="70" width="320" height="44"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="Q8J-Sg-bUA"/>
                                     </mask>
@@ -73,8 +72,7 @@
                                         <exclude reference="gbl-f2-x4p"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="129" width="320" height="22"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="gbl-f2-x4p"/>
                                     </mask>
@@ -92,8 +90,7 @@
                                         <exclude reference="ghp-pz-feN"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="159" width="320" height="44"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="ghp-pz-feN"/>
                                     </mask>
@@ -130,12 +127,12 @@
                                 <exclude reference="MHK-UB-byL"/>
                                 <exclude reference="QXy-W7-dwQ"/>
                                 <exclude reference="lQP-V5-tsv"/>
-                                <exclude reference="76P-U7-fGE"/>
-                                <exclude reference="Je9-GO-UPy"/>
-                                <exclude reference="dmF-em-HM3"/>
                                 <exclude reference="8hw-Ug-wfI"/>
                                 <exclude reference="H7C-lf-m7N"/>
                                 <exclude reference="y81-Bf-wic"/>
+                                <exclude reference="76P-U7-fGE"/>
+                                <exclude reference="Je9-GO-UPy"/>
+                                <exclude reference="dmF-em-HM3"/>
                                 <exclude reference="2dT-Yx-bj7"/>
                                 <exclude reference="41M-bI-QoH"/>
                                 <exclude reference="Ynd-wf-gp0"/>
@@ -153,12 +150,12 @@
                                 <include reference="MHK-UB-byL"/>
                                 <include reference="QXy-W7-dwQ"/>
                                 <include reference="lQP-V5-tsv"/>
-                                <include reference="76P-U7-fGE"/>
-                                <include reference="Je9-GO-UPy"/>
-                                <include reference="dmF-em-HM3"/>
                                 <include reference="8hw-Ug-wfI"/>
                                 <include reference="H7C-lf-m7N"/>
                                 <include reference="y81-Bf-wic"/>
+                                <include reference="76P-U7-fGE"/>
+                                <include reference="Je9-GO-UPy"/>
+                                <include reference="dmF-em-HM3"/>
                                 <include reference="2dT-Yx-bj7"/>
                                 <include reference="41M-bI-QoH"/>
                                 <include reference="Ynd-wf-gp0"/>

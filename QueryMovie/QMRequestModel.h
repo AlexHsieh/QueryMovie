@@ -14,4 +14,7 @@
 @property (nonatomic,strong) NSString *page;
 @property (nonatomic,strong) NSString *year;
 
+@property (nonatomic,strong) NSString *sortBy;
+@property (nonatomic,strong) NSString *voteCountGreat;
+
 @end
