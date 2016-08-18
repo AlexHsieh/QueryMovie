@@ -143,23 +143,16 @@
 		8B3AD3751D655E73000F6CC0 /* QueryMovie */ = {
 			isa = PBXGroup;
 			children = (
+				8B3AD3B71D65CD7F000F6CC0 /* Gloabl */,
+				8B3AD3B61D65CD55000F6CC0 /* VM&VC */,
+				8B3AD3B51D65CD3B000F6CC0 /* Model */,
 				8B3AD3791D655E73000F6CC0 /* AppDelegate.h */,
 				8B3AD37A1D655E73000F6CC0 /* AppDelegate.m */,
-				8B3AD37C1D655E73000F6CC0 /* ViewController.h */,
-				8B3AD37D1D655E73000F6CC0 /* ViewController.m */,
 				8B3AD37F1D655E73000F6CC0 /* Main.storyboard */,
 				8B3AD3821D655E73000F6CC0 /* Assets.xcassets */,
 				8B3AD3841D655E73000F6CC0 /* LaunchScreen.storyboard */,
 				8B3AD3871D655E73000F6CC0 /* Info.plist */,
 				8B3AD3761D655E73000F6CC0 /* Supporting Files */,
-				8B3AD3A91D6566FE000F6CC0 /* QMClient.h */,
-				8B3AD3AA1D6566FE000F6CC0 /* QMClient.m */,
-				8B3AD3AC1D65A864000F6CC0 /* QMRequestModel.h */,
-				8B3AD3AD1D65A864000F6CC0 /* QMRequestModel.m */,
-				8B3AD3AF1D65B10B000F6CC0 /* QMResponseModel.h */,
-				8B3AD3B01D65B10B000F6CC0 /* QMResponseModel.m */,
-				8B3AD3B21D65C02F000F6CC0 /* QMMovieModel.h */,
-				8B3AD3B31D65C02F000F6CC0 /* QMMovieModel.m */,
 			);
 			path = QueryMovie;
 			sourceTree = "<group>";
@@ -188,6 +181,37 @@
 				8B3AD39D1D655E73000F6CC0 /* Info.plist */,
 			);
 			path = QueryMovieUITests;
+			sourceTree = "<group>";
+		};
+		8B3AD3B51D65CD3B000F6CC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B3AD3AC1D65A864000F6CC0 /* QMRequestModel.h */,
+				8B3AD3AD1D65A864000F6CC0 /* QMRequestModel.m */,
+				8B3AD3AF1D65B10B000F6CC0 /* QMResponseModel.h */,
+				8B3AD3B01D65B10B000F6CC0 /* QMResponseModel.m */,
+				8B3AD3B21D65C02F000F6CC0 /* QMMovieModel.h */,
+				8B3AD3B31D65C02F000F6CC0 /* QMMovieModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8B3AD3B61D65CD55000F6CC0 /* VM&VC */ = {
+			isa = PBXGroup;
+			children = (
+				8B3AD37C1D655E73000F6CC0 /* ViewController.h */,
+				8B3AD37D1D655E73000F6CC0 /* ViewController.m */,
+			);
+			name = "VM&VC";
+			sourceTree = "<group>";
+		};
+		8B3AD3B71D65CD7F000F6CC0 /* Gloabl */ = {
+			isa = PBXGroup;
+			children = (
+				8B3AD3A91D6566FE000F6CC0 /* QMClient.h */,
+				8B3AD3AA1D6566FE000F6CC0 /* QMClient.m */,
+			);
+			name = Gloabl;
 			sourceTree = "<group>";
 		};
 		B51D460BC1B743683188C1C4 /* Frameworks */ = {
