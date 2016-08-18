@@ -14,4 +14,9 @@
  */
 @property (strong,nonatomic) NSArray *years;
 
+
+/* search action
+ */
+- (void)searchWithCompletion:(void (^)(BOOL success, NSError *error))completion;
+
 @end

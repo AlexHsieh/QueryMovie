@@ -10,6 +10,7 @@
 #import "QMClient.h"
 #import "QMRequestModel.h"
 #import "ViewControllerViewModel.h"
+#import "MBProgressHUD.h"
 
 @interface ViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *movieTitleTextField;
@@ -78,7 +79,22 @@
 #pragma mark - Action
 
 - (IBAction)searchButtonClicked:(id)sender {
-    
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self disbaleAllInterface];
+    [self.viewModel searchWithCompletion:^(BOOL success, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self enableAllInterface];
+    }];
+}
+
+- (void)disbaleAllInterface {
+    [self.view endEditing:YES];
+    self.view.userInteractionEnabled = NO;
+}
+
+- (void)enableAllInterface {
+    self.view.userInteractionEnabled = YES;
 }
 
 #pragma mark - getter & setter

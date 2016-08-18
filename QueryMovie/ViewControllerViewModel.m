@@ -25,4 +25,8 @@
     return _years;
 }
 
+- (void)searchWithCompletion:(void (^)(BOOL success, NSError *error))completion {
+    
+}
+
 @end
