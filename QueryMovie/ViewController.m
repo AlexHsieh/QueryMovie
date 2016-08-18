@@ -25,13 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initialSetup];
-    
-//    NSString *baseUrlString = @"http://api.themoviedb.org/3/";
-//    QMClient *client = [[QMClient alloc]initWithBaseURL:[NSURL URLWithString:baseUrlString]];
-//    QMRequestModel *rm = [[QMRequestModel alloc]init];
-//    rm.query = @"ring";
-//    rm.page = @"1";
-//    [client search:rm];
 }
 
 - (void)didReceiveMemoryWarning {
