@@ -21,6 +21,7 @@ PODS:
     - Bolts/Tasks
   - Bolts/Tasks (1.7.0)
   - JSONModel (1.2.0)
+  - MBProgressHUD (0.9.2)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - AFNetworking
   - Bolts
   - JSONModel
+  - MBProgressHUD
   - SDWebImage
   - UIActivityIndicator-for-SDWebImage
 
@@ -38,9 +40,10 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
   JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 97d852c76c41b262afb38bff018a4d1be94cdb7c
+PODFILE CHECKSUM: 0722fddde57b7da566fefe854df99cec7b85f431
 
 COCOAPODS: 1.0.0

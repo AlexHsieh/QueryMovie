@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '98A0BD1B7D77680A247E1F16CBC64EF6'
+               BlueprintIdentifier = 'B0929CDA1ECC27D5B851E5E06A5B7D57'
                BlueprintName = 'Pods-QueryMovie'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-QueryMovie.a'>
