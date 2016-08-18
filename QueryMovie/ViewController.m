@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "QMClient.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString *baseUrlString = @"http://api.themoviedb.org/3/";
+    QMClient *client = [[QMClient alloc]initWithBaseURL:[NSURL URLWithString:baseUrlString]];
+    [client _taskCompletion];
 }
 
 - (void)didReceiveMemoryWarning {
