@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QMClient.h"
+#import "QMRequestModel.h"
 
 @interface ViewController ()
 
@@ -20,7 +21,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSString *baseUrlString = @"http://api.themoviedb.org/3/";
     QMClient *client = [[QMClient alloc]initWithBaseURL:[NSURL URLWithString:baseUrlString]];
-    [client _taskCompletion];
+    QMRequestModel *rm = [[QMRequestModel alloc]init];
+    rm.query = @"ring";
+    rm.page = @"1";
+    [client search:rm];
 }
 
 - (void)didReceiveMemoryWarning {

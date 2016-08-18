@@ -17,8 +17,12 @@
 
 @end
 
+@class QMRequestModel;
 @interface QMClient : AFHTTPSessionManager
 
-- (QMClientTaskCompletionSource *)_taskCompletion;
+- (QMClientTaskCompletionSource *)_taskCompletionwWithPath:(NSString *)path
+                                              requestModel:(QMRequestModel *)model;
+
+- (QMClientTaskCompletionSource *)search:(QMRequestModel *)model;
 
 @end

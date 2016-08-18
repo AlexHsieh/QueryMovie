@@ -7,6 +7,7 @@
 //
 
 #import "QMClient.h"
+#import "QMRequestModel.h"
 
 @implementation QMClientTaskCompletionSource
 
@@ -48,18 +49,23 @@
     return self;
 }
 
+- (NSDictionary *)convertModelToParameter:(QMRequestModel *)model {
+    NSMutableDictionary *d = model.toDictionary.mutableCopy;
+    [d setObject:@"8318e2cc672e2f5929d3a63dcff410c3" forKey:@"api_key"];
+    return d.copy;
+}
 
-- (QMClientTaskCompletionSource *)_taskCompletion
+
+- (QMClientTaskCompletionSource *)_taskCompletionwWithPath:(NSString *)path
+                                              requestModel:(QMRequestModel *)model
 {
     QMClientTaskCompletionSource *source = [QMClientTaskCompletionSource taskCompletionSource];
-    // make |requestPath|, this will create `<baseURL>/discover/movie`
-    NSString *requestPath = [NSString stringWithFormat:@"discover/movie"];
     
     // Create a example parameters for now
-    NSDictionary *parameters = @{@"api_key":@"8318e2cc672e2f5929d3a63dcff410c3",@"sort_by":@"vote_average.desc",
-                                 @"page":@"1",@"vote_count.gte":@"100"};
+    NSDictionary *parameters = [self convertModelToParameter:model];
   
-    source.connectionTask = [self GET:requestPath parameters:parameters progress:nil success:^(NSURLSessionDataTask *task, id result) {
+    source.connectionTask = [self GET:path parameters:parameters progress:nil
+                              success:^(NSURLSessionDataTask *task, id result) {
         NSLog(@"query result = %@",result);
         [source setResult:result];
     }failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -69,6 +75,10 @@
     
 
     return source;
+}
+
+- (QMClientTaskCompletionSource *)search:(QMRequestModel *)model {
+    return [self _taskCompletionwWithPath:@"search/movie" requestModel:model];
 }
 
 @end
