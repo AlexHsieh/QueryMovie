@@ -88,4 +88,9 @@
     return [self _taskCompletionwWithPath:@"search/movie" requestModel:model];
 }
 
+- (QMClientTaskCompletionSource *)discover:(QMRequestModel *)model {
+    return [self _taskCompletionwWithPath:@"discover/movie" requestModel:model];
+}
+
+
 @end
