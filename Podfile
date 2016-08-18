@@ -6,6 +6,7 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'UIActivityIndicator-for-SDWebImage'
 pod 'JSONModel'
+pod 'Bolts'
 
 end
 
