@@ -8,6 +8,7 @@
 
 #import "QMClient.h"
 #import "QMRequestModel.h"
+#import "QMResponseModel.h"
 
 @implementation QMClientTaskCompletionSource
 
@@ -66,12 +67,18 @@
   
     source.connectionTask = [self GET:path parameters:parameters progress:nil
                               success:^(NSURLSessionDataTask *task, id result) {
-        NSLog(@"query result = %@",result);
-        [source setResult:result];
-    }failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"query error = %@",error);
-        [source setError:error];
-    }];
+                                  NSError *jsonError = nil;
+                                  QMResponseModel *response = [[QMResponseModel alloc] initWithDictionary:result error:&jsonError];
+                                  if (jsonError) {
+                                      [source setError:jsonError];
+                                      return;
+                                  }
+                                NSLog(@"query response = %@",response);
+                                [source setResult:response];
+                            }failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                NSLog(@"query error = %@",error);
+                                [source setError:error];
+                            }];
     
 
     return source;

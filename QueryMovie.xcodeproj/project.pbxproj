@@ -20,6 +20,8 @@
 		8B3AD39C1D655E73000F6CC0 /* QueryMovieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD39B1D655E73000F6CC0 /* QueryMovieUITests.m */; };
 		8B3AD3AB1D6566FE000F6CC0 /* QMClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3AA1D6566FE000F6CC0 /* QMClient.m */; };
 		8B3AD3AE1D65A864000F6CC0 /* QMRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3AD1D65A864000F6CC0 /* QMRequestModel.m */; };
+		8B3AD3B11D65B10B000F6CC0 /* QMResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3B01D65B10B000F6CC0 /* QMResponseModel.m */; };
+		8B3AD3B41D65C02F000F6CC0 /* QMMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3B31D65C02F000F6CC0 /* QMMovieModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		8B3AD3AA1D6566FE000F6CC0 /* QMClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMClient.m; sourceTree = "<group>"; };
 		8B3AD3AC1D65A864000F6CC0 /* QMRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMRequestModel.h; sourceTree = "<group>"; };
 		8B3AD3AD1D65A864000F6CC0 /* QMRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMRequestModel.m; sourceTree = "<group>"; };
+		8B3AD3AF1D65B10B000F6CC0 /* QMResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMResponseModel.h; sourceTree = "<group>"; };
+		8B3AD3B01D65B10B000F6CC0 /* QMResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMResponseModel.m; sourceTree = "<group>"; };
+		8B3AD3B21D65C02F000F6CC0 /* QMMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMovieModel.h; sourceTree = "<group>"; };
+		8B3AD3B31D65C02F000F6CC0 /* QMMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMovieModel.m; sourceTree = "<group>"; };
 		98DAE080D142DA2A8DF1EE0C /* Pods-QueryMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueryMovieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QueryMovieTests/Pods-QueryMovieTests.release.xcconfig"; sourceTree = "<group>"; };
 		CAE3F58F76ECA14F823F0211 /* libPods-QueryMovieUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QueryMovieUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53342BA936D6748C23963C0 /* Pods-QueryMovieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueryMovieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QueryMovieTests/Pods-QueryMovieTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +156,10 @@
 				8B3AD3AA1D6566FE000F6CC0 /* QMClient.m */,
 				8B3AD3AC1D65A864000F6CC0 /* QMRequestModel.h */,
 				8B3AD3AD1D65A864000F6CC0 /* QMRequestModel.m */,
+				8B3AD3AF1D65B10B000F6CC0 /* QMResponseModel.h */,
+				8B3AD3B01D65B10B000F6CC0 /* QMResponseModel.m */,
+				8B3AD3B21D65C02F000F6CC0 /* QMMovieModel.h */,
+				8B3AD3B31D65C02F000F6CC0 /* QMMovieModel.m */,
 			);
 			path = QueryMovie;
 			sourceTree = "<group>";
@@ -453,6 +463,8 @@
 			files = (
 				8B3AD37E1D655E73000F6CC0 /* ViewController.m in Sources */,
 				8B3AD37B1D655E73000F6CC0 /* AppDelegate.m in Sources */,
+				8B3AD3B11D65B10B000F6CC0 /* QMResponseModel.m in Sources */,
+				8B3AD3B41D65C02F000F6CC0 /* QMMovieModel.m in Sources */,
 				8B3AD3AE1D65A864000F6CC0 /* QMRequestModel.m in Sources */,
 				8B3AD3AB1D6566FE000F6CC0 /* QMClient.m in Sources */,
 				8B3AD3781D655E73000F6CC0 /* main.m in Sources */,
