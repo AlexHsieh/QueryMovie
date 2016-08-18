@@ -20,9 +20,12 @@
 @class QMRequestModel;
 @interface QMClient : AFHTTPSessionManager
 
-- (QMClientTaskCompletionSource *)_taskCompletionwWithPath:(NSString *)path
-                                              requestModel:(QMRequestModel *)model;
-
+/** search API
+ */
 - (QMClientTaskCompletionSource *)search:(QMRequestModel *)model;
+
+/** discover API
+ */
+- (QMClientTaskCompletionSource *)discover:(QMRequestModel *)model;
 
 @end

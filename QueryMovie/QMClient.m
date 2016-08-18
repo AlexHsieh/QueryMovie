@@ -9,6 +9,7 @@
 #import "QMClient.h"
 #import "QMRequestModel.h"
 #import "QMResponseModel.h"
+#import "JSONModel+QueryMovie.h"
 
 @implementation QMClientTaskCompletionSource
 
@@ -51,7 +52,7 @@
 }
 
 - (NSDictionary *)convertModelToParameter:(QMRequestModel *)model {
-    NSMutableDictionary *d = model.toDictionary.mutableCopy;
+    NSMutableDictionary *d = model.modelToDictionary.mutableCopy;
     [d setObject:@"8318e2cc672e2f5929d3a63dcff410c3" forKey:@"api_key"];
     return d.copy;
 }
@@ -87,5 +88,10 @@
 - (QMClientTaskCompletionSource *)search:(QMRequestModel *)model {
     return [self _taskCompletionwWithPath:@"search/movie" requestModel:model];
 }
+
+- (QMClientTaskCompletionSource *)discover:(QMRequestModel *)model {
+    return [self _taskCompletionwWithPath:@"discover/movie" requestModel:model];
+}
+
 
 @end

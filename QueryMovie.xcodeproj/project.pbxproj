@@ -12,6 +12,7 @@
 		8827B5A2E2A9831E93520B50 /* libPods-QueryMovieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDA733CD9C6930C8A4E69C3 /* libPods-QueryMovieTests.a */; };
 		8B043FAD1D65D62400146137 /* ViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B043FAC1D65D62400146137 /* ViewControllerViewModel.m */; };
 		8B043FB01D65E7E000146137 /* QMFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B043FAF1D65E7E000146137 /* QMFunctions.m */; };
+		8B043FB31D65FC7000146137 /* JSONModel+QueryMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B043FB21D65FC7000146137 /* JSONModel+QueryMovie.m */; };
 		8B3AD3781D655E73000F6CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3771D655E73000F6CC0 /* main.m */; };
 		8B3AD37B1D655E73000F6CC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD37A1D655E73000F6CC0 /* AppDelegate.m */; };
 		8B3AD37E1D655E73000F6CC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD37D1D655E73000F6CC0 /* ViewController.m */; };
@@ -53,6 +54,8 @@
 		8B043FAC1D65D62400146137 /* ViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerViewModel.m; sourceTree = "<group>"; };
 		8B043FAE1D65E7E000146137 /* QMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMFunctions.h; sourceTree = "<group>"; };
 		8B043FAF1D65E7E000146137 /* QMFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMFunctions.m; sourceTree = "<group>"; };
+		8B043FB11D65FC7000146137 /* JSONModel+QueryMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+QueryMovie.h"; sourceTree = "<group>"; };
+		8B043FB21D65FC7000146137 /* JSONModel+QueryMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+QueryMovie.m"; sourceTree = "<group>"; };
 		8B3AD3731D655E73000F6CC0 /* QueryMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueryMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3AD3771D655E73000F6CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B3AD3791D655E73000F6CC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				8B3AD3AA1D6566FE000F6CC0 /* QMClient.m */,
 				8B043FAE1D65E7E000146137 /* QMFunctions.h */,
 				8B043FAF1D65E7E000146137 /* QMFunctions.m */,
+				8B043FB11D65FC7000146137 /* JSONModel+QueryMovie.h */,
+				8B043FB21D65FC7000146137 /* JSONModel+QueryMovie.m */,
 			);
 			name = Gloabl;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				8B3AD3AE1D65A864000F6CC0 /* QMRequestModel.m in Sources */,
 				8B3AD3AB1D6566FE000F6CC0 /* QMClient.m in Sources */,
 				8B3AD3781D655E73000F6CC0 /* main.m in Sources */,
+				8B043FB31D65FC7000146137 /* JSONModel+QueryMovie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
