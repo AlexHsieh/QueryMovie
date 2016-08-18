@@ -7,6 +7,7 @@ pod 'SDWebImage'
 pod 'UIActivityIndicator-for-SDWebImage'
 pod 'JSONModel'
 pod 'Bolts'
+pod 'MBProgressHUD'
 
 end
 
