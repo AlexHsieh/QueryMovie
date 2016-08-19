@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  QMQueryViewController.m
 //  QueryMovie
 //
 //  Created by Alex Hsieh on 8/18/16.
 //  Copyright © 2016 Alex Hsieh. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "QMQueryViewController.h"
 #import "QMClient.h"
 #import "QMRequestModel.h"
 #import "MBProgressHUD.h"
 #import "QMFunctions.h"
 
-@interface ViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
+@interface QMQueryViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *movieTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *yearTextField;
 
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation ViewController
+@implementation QMQueryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -13,7 +13,7 @@
 		8B043FB31D65FC7000146137 /* JSONModel+QueryMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B043FB21D65FC7000146137 /* JSONModel+QueryMovie.m */; };
 		8B3AD3781D655E73000F6CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3771D655E73000F6CC0 /* main.m */; };
 		8B3AD37B1D655E73000F6CC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD37A1D655E73000F6CC0 /* AppDelegate.m */; };
-		8B3AD37E1D655E73000F6CC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD37D1D655E73000F6CC0 /* ViewController.m */; };
+		8B3AD37E1D655E73000F6CC0 /* QMQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD37D1D655E73000F6CC0 /* QMQueryViewController.m */; };
 		8B3AD3811D655E73000F6CC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AD37F1D655E73000F6CC0 /* Main.storyboard */; };
 		8B3AD3831D655E73000F6CC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AD3821D655E73000F6CC0 /* Assets.xcassets */; };
 		8B3AD3861D655E73000F6CC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3AD3841D655E73000F6CC0 /* LaunchScreen.storyboard */; };
@@ -59,8 +59,8 @@
 		8B3AD3771D655E73000F6CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B3AD3791D655E73000F6CC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B3AD37A1D655E73000F6CC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8B3AD37C1D655E73000F6CC0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8B3AD37D1D655E73000F6CC0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B3AD37C1D655E73000F6CC0 /* QMQueryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMQueryViewController.h; sourceTree = "<group>"; };
+		8B3AD37D1D655E73000F6CC0 /* QMQueryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMQueryViewController.m; sourceTree = "<group>"; };
 		8B3AD3801D655E73000F6CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B3AD3821D655E73000F6CC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3AD3851D655E73000F6CC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -205,8 +205,8 @@
 		8B3AD3B61D65CD55000F6CC0 /* VM&VC */ = {
 			isa = PBXGroup;
 			children = (
-				8B3AD37C1D655E73000F6CC0 /* ViewController.h */,
-				8B3AD37D1D655E73000F6CC0 /* ViewController.m */,
+				8B3AD37C1D655E73000F6CC0 /* QMQueryViewController.h */,
+				8B3AD37D1D655E73000F6CC0 /* QMQueryViewController.m */,
 			);
 			name = "VM&VC";
 			sourceTree = "<group>";
@@ -496,7 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B043FB01D65E7E000146137 /* QMFunctions.m in Sources */,
-				8B3AD37E1D655E73000F6CC0 /* ViewController.m in Sources */,
+				8B3AD37E1D655E73000F6CC0 /* QMQueryViewController.m in Sources */,
 				8B3AD37B1D655E73000F6CC0 /* AppDelegate.m in Sources */,
 				8B3AD3B11D65B10B000F6CC0 /* QMResponseModel.m in Sources */,
 				8B3AD3B41D65C02F000F6CC0 /* QMMovieModel.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QMQueryViewController.h
 //  QueryMovie
 //
 //  Created by Alex Hsieh on 8/18/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface QMQueryViewController : UIViewController
 
 
 @end
