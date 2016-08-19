@@ -105,6 +105,7 @@
     rm.query = self.movieTitleTextField.text?:@"";
     rm.page = @"1";
     rm.year = self.yearTextField.text?:nil;
+    rm.genre = [self getGenreIdFromString:self.genreTextField.text]?:nil;
     rm.sortBy = @"vote_average.asc";
     rm.voteCountGreat = @"100";
     
@@ -126,6 +127,15 @@
 
 - (void)enableAllInterface {
     self.view.userInteractionEnabled = YES;
+}
+
+- (NSString *)getGenreIdFromString:(NSString *)name {
+    for (NSDictionary *dic in self.genres) {
+        if ([name isEqualToString:dic[@"name"]]) {
+            return dic[@"id"];
+        }
+    }
+    return nil;
 }
 
 #pragma mark - getter & setter

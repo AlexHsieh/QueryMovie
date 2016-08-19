@@ -94,8 +94,10 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
 
 - (NSArray *)getMovies {
  
-    return [[[self filterTitle].task continueWithSuccessBlock:^id(BFTask *task) {
+    return [[[[self filterTitle].task continueWithSuccessBlock:^id(BFTask *task) {
         return [self filterYear:task.result].task;
+    }] continueWithSuccessBlock:^id(BFTask *task) {
+        return [self filterGenre:task.result].task;
     }] continueWithSuccessBlock:^id(BFTask *task) {
         return [self sortMovies:task.result].task;
     }].result;
@@ -134,6 +136,24 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
     for (QMMovieModel *mm in movies) {
         NSString *year = [NSDate fromDateToYear:mm.date];
         if ([year isEqualToString:self.requestModel.year]) {
+            [filterMovies addObject:mm];
+        }
+    }
+    
+    [completionSource setResult:filterMovies];
+    return completionSource;
+}
+
+- (BFTaskCompletionSource *)filterGenre:(NSArray *)movies {
+    BFTaskCompletionSource *completionSource = [BFTaskCompletionSource taskCompletionSource];
+    if (!self.requestModel || !self.requestModel.genre) {
+        [completionSource setResult:movies];
+        return completionSource;
+    }
+    
+    NSMutableArray *filterMovies = [NSMutableArray array];
+    for (QMMovieModel *mm in movies) {
+        if ([mm.genre objectForKey:@(self.requestModel.genre.integerValue)]) {
             [filterMovies addObject:mm];
         }
     }
