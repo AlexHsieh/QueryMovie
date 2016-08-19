@@ -280,7 +280,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="Pmk-8Z-Wdb" kind="show" id="l6t-ed-jos"/>
+                        <segue destination="Pmk-8Z-Wdb" kind="show" identifier="movieDetailSegueIdentifier" id="l6t-ed-jos"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yNy-9z-ZLh" userLabel="First Responder" sceneMemberID="firstResponder"/>

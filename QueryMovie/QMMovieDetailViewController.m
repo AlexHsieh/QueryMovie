@@ -34,4 +34,8 @@
     self.overviewLabel.text = self.movieModel.overview;
 }
 
+- (void)setupMovieModel:(QMMovieModel *)model {
+    _movieModel = model;
+}
+
 @end

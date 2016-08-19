@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class QMMovieModel;
+
 @interface QMMovieDetailViewController : UIViewController
+
+- (void)setupMovieModel:(QMMovieModel *)model;
 
 @end
