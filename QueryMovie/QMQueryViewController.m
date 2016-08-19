@@ -16,13 +16,19 @@
 @interface QMQueryViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *movieTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *yearTextField;
+@property (weak, nonatomic) IBOutlet UITextField *genreTextField;
 
 @property (strong,nonatomic) UIPickerView *picker;
+@property (strong,nonatomic) UIPickerView *genrePicker;
 @property (nonatomic) BOOL isLoading;
 
-/** year from 1960 to now
+/** year from 1961 to now
  */
 @property (strong,nonatomic) NSArray *years;
+
+/** genre type array
+ */
+@property (strong,nonatomic) NSArray *genres;
 
 @end
 
@@ -42,7 +48,7 @@
     [self.movieTitleTextField becomeFirstResponder];
     
     self.yearTextField.inputView = self.picker;
-    
+    self.genreTextField.inputView = self.genrePicker;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -54,6 +60,7 @@
     return NO;
 }
 
+
 #pragma mark - picker delegate
 
 - (NSInteger)numberOfComponentsInPickerView: (UIPickerView*)thePickerView {
@@ -62,16 +69,20 @@
 
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return self.years.count;
+    return thePickerView == self.picker ? self.years.count : self.genres.count;
 }
 - (NSString *)pickerView:(UIPickerView *)thePickerView
              titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return self.years[row];
+    return thePickerView == self.picker ? self.years[row] : self.genres[row][@"name"];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    [self.yearTextField setText:self.years[row]];
+    if (pickerView == self.picker) {
+        [self.yearTextField setText:self.years[row]];
+    } else {
+        [self.genreTextField setText:self.genres[row][@"name"]];
+    }
 }
 
 
@@ -128,6 +139,14 @@
     return _picker;
 }
 
+- (UIPickerView *)genrePicker {
+    if (!_genrePicker) {
+        UIPickerView *picker = [[UIPickerView alloc]init];
+        picker.delegate = self;
+        _genrePicker = picker;
+    }
+    return _genrePicker;
+}
 
 - (NSArray *)years {
     if (!_years) {
@@ -142,5 +161,15 @@
     return _years;
 }
 
+- (NSArray *)genres {
+    if (!_genres) {
+        NSMutableArray *arr = [NSMutableArray array];
+        [[[QMFunctions sharedInstance]genreType] enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *name, BOOL *stop) {
+            [arr addObject:@{@"id":key,@"name":name}];
+        }];
+        _genres = arr.copy;
+    }
+    return _genres;
+}
 
 @end
