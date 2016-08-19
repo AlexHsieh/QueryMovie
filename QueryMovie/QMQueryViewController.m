@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *yearTextField;
 
 @property (strong,nonatomic) UIPickerView *picker;
+@property (nonatomic) BOOL isLoading;
 
 /** year from 1960 to now
  */
@@ -86,6 +87,7 @@
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self disbaleAllInterface];
+    self.isLoading = YES;
     
     QMRequestModel *rm = [[QMRequestModel alloc]init];
     rm.query = self.movieTitleTextField.text?:@"";
@@ -96,7 +98,8 @@
     [[QMFunctions sharedInstance] queryMovieFromCacheThenNetwork:rm completion:^(BOOL isSuccess, NSError *error){
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self enableAllInterface];
-        if (isSuccess) {
+        if (isSuccess && self.isLoading) {
+            self.isLoading = NO;
             [self performSegueWithIdentifier:@"movieListViewSegueIdentifier" sender:self];
         }
     }];
