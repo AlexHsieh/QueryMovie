@@ -20,4 +20,5 @@
 @property (nonatomic,strong) NSDate *date;
 @property (nonatomic,assign) float rate;
 @property (nonatomic,assign) float voteCount;
+@property (nonatomic,strong) NSDictionary *genre;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "QMMovieModel.h"
+#import "QMFunctions.h"
 
 @implementation QMMovieModel
 + (JSONKeyMapper *)keyMapper {
@@ -17,7 +18,8 @@
                                                        @"poster_path":@"poster",
                                                        @"release_date": @"date",
                                                        @"vote_average": @"rate",
-                                                       @"vote_count": @"voteCount",}];
+                                                       @"vote_count": @"voteCount",
+                                                       @"genre_ids":@"genre"}];
 }
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
@@ -30,6 +32,17 @@
     NSTimeZone *taiwanTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT+0800"];
     [dateFormatter setTimeZone:taiwanTimeZone];
     _date = [dateFormatter dateFromString:dateStr];
+}
+
+- (void)setGenreWithNSArray:(NSArray *)arr {
+    NSMutableDictionary *md = [NSMutableDictionary dictionary];
+    for (NSNumber *n in arr) {
+        NSString *genre = [[[QMFunctions sharedInstance] genreType] objectForKey:n.stringValue];
+        if (genre) {
+            [md setObject:genre forKey:n];
+        }
+    }
+    _genre = md.copy;
 }
 
 @end
