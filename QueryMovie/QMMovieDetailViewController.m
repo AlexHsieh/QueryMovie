@@ -8,6 +8,7 @@
 
 #import "QMMovieDetailViewController.h"
 #import "QMMovieModel.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 
 @interface QMMovieDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -32,6 +33,8 @@
 - (void)setupGUI {
     self.titleLabel.text = self.movieModel.title;
     self.overviewLabel.text = self.movieModel.overview;
+    NSURL *imageURL = [NSURL URLWithString:[@"http://image.tmdb.org/t/p/w342" stringByAppendingString:self.movieModel.poster]];
+    [self.imageView setImageWithURL:imageURL usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
 }
 
 - (void)setupMovieModel:(QMMovieModel *)model {
