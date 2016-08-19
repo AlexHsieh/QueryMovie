@@ -9,6 +9,7 @@
 #import "QMMovieListTableViewController.h"
 #import "QMFunctions.h"
 #import "QMMovieListTableViewCell.h"
+#import "QMMovieDetailViewController.h"
 
 @interface QMMovieListTableViewController ()
 @property (nonatomic,strong) NSArray *data;
@@ -46,7 +47,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    QMMovieModel *model = self.data[indexPath.row];
+    [self performSegueWithIdentifier:@"movieDetailSegueIdentifier" sender:model];
 }
 
 #pragma mark - Navigation
@@ -54,7 +56,8 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    QMMovieDetailViewController *vc = segue.destinationViewController;
+    [vc setupMovieModel:sender];
 }
 
 
