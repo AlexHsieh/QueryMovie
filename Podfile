@@ -1,4 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
 target 'QueryMovie' do
 
@@ -8,6 +9,7 @@ pod 'UIActivityIndicator-for-SDWebImage'
 pod 'JSONModel'
 pod 'Bolts'
 pod 'MBProgressHUD'
+pod 'ReactiveCocoa'
 
 end
 
