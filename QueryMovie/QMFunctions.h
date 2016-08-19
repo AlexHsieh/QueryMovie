@@ -27,9 +27,16 @@ extern NSString *const QMNotificationCacheUpdated;
 - (void)queryMovieFromCacheThenNetwork:(QMRequestModel *)requestModel
                           completion:(CompletionBlock)completion;
 
-/** This method will return Movies loaded from cache 
+
+/** This method returns Movies loaded from cache
  * and filtered and sorted based on requestModel
  */
 - (NSArray *)getMovies;
+
+
+/** This method returns genre dictionary.
+ *  key is genre id, obj is name
+ */
+- (NSDictionary *)genreType;
 
 @end

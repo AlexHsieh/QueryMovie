@@ -20,7 +20,7 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
 @property (nonatomic, strong) QMClient *client;
 @property (nonatomic, strong) NSMutableDictionary *cache;
 @property (nonatomic, strong) QMRequestModel *requestModel;
-
+@property (nonatomic, strong) NSDictionary *genre;
 @end
 
 @implementation QMFunctions
@@ -94,8 +94,10 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
 
 - (NSArray *)getMovies {
  
-    return [[[self filterTitle].task continueWithSuccessBlock:^id(BFTask *task) {
+    return [[[[self filterTitle].task continueWithSuccessBlock:^id(BFTask *task) {
         return [self filterYear:task.result].task;
+    }] continueWithSuccessBlock:^id(BFTask *task) {
+        return [self filterGenre:task.result].task;
     }] continueWithSuccessBlock:^id(BFTask *task) {
         return [self sortMovies:task.result].task;
     }].result;
@@ -142,6 +144,24 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
     return completionSource;
 }
 
+- (BFTaskCompletionSource *)filterGenre:(NSArray *)movies {
+    BFTaskCompletionSource *completionSource = [BFTaskCompletionSource taskCompletionSource];
+    if (!self.requestModel || !self.requestModel.genre) {
+        [completionSource setResult:movies];
+        return completionSource;
+    }
+    
+    NSMutableArray *filterMovies = [NSMutableArray array];
+    for (QMMovieModel *mm in movies) {
+        if ([mm.genre objectForKey:@(self.requestModel.genre.integerValue)]) {
+            [filterMovies addObject:mm];
+        }
+    }
+    
+    [completionSource setResult:filterMovies];
+    return completionSource;
+}
+
 - (BFTaskCompletionSource *)sortMovies:(NSArray *)movies {
     BFTaskCompletionSource *completionSource = [BFTaskCompletionSource taskCompletionSource];
 
@@ -159,6 +179,17 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
         _cache = [[NSMutableDictionary alloc]init];
     }
     return _cache;
+}
+
+- (NSDictionary *)genreType {
+    if (!_genre) {
+        _genre = @{@"28":@"Action",@"12":@"Adventure",@"16":@"Animation",@"35":@"Comedy",
+                   @"80":@"Crime",@"99":@"Documentary",@"18":@"Drama",@"10751":@"Family",
+                   @"14":@"Fantasy",@"10769":@"Foreign",@"36":@"History",@"27":@"Horror",
+                   @"10402":@"Music",@"9648":@"Mystery",@"10749":@"Romance",@"878":@"Science Fiction",
+                   @"10770":@"TV Movie",@"53":@"Thriller",@"10752":@"War",@"37":@"Western"};
+    }
+    return _genre;
 }
 
 @end

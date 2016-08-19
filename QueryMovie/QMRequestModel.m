@@ -16,7 +16,8 @@
                                                        @"page": @"page",
                                                        @"primary_release_year": @"year",
                                                        @"sort_by": @"sortBy",
-                                                       @"vote_count.gte": @"voteCountGreat"
+                                                       @"vote_count.gte": @"voteCountGreat",
+                                                       @"with_genres":@"genre"
                                                        }];
 }
 
