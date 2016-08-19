@@ -40,6 +40,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EX: Lord of Ring" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4W9-IX-YCQ">
                                 <rect key="frame" x="20" y="49" width="317" height="44"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Q8J-Sg-bUA"/>
                                 </constraints>
@@ -80,6 +81,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bcc-G9-pB8">
                                 <rect key="frame" x="20" y="49" width="317" height="44"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="ghp-pz-feN"/>
                                 </constraints>
@@ -120,6 +122,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HIx-co-pLx">
                                 <rect key="frame" x="20" y="49" width="317" height="44"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="FWs-9I-M8J"/>
                                 </constraints>
@@ -177,19 +180,19 @@
                                 <exclude reference="MHK-UB-byL"/>
                                 <exclude reference="QXy-W7-dwQ"/>
                                 <exclude reference="lQP-V5-tsv"/>
-                                <exclude reference="76P-U7-fGE"/>
-                                <exclude reference="Je9-GO-UPy"/>
-                                <exclude reference="dmF-em-HM3"/>
+                                <exclude reference="2sH-2a-4nE"/>
+                                <exclude reference="L2B-5B-f45"/>
+                                <exclude reference="pdv-4D-rfc"/>
                                 <exclude reference="8hw-Ug-wfI"/>
                                 <exclude reference="H7C-lf-m7N"/>
                                 <exclude reference="y81-Bf-wic"/>
+                                <exclude reference="76P-U7-fGE"/>
+                                <exclude reference="Je9-GO-UPy"/>
+                                <exclude reference="dmF-em-HM3"/>
                                 <exclude reference="2dT-Yx-bj7"/>
                                 <exclude reference="41M-bI-QoH"/>
                                 <exclude reference="Ynd-wf-gp0"/>
                                 <exclude reference="dyL-ch-o4X"/>
-                                <exclude reference="2sH-2a-4nE"/>
-                                <exclude reference="L2B-5B-f45"/>
-                                <exclude reference="pdv-4D-rfc"/>
                                 <exclude reference="1u5-Co-TeX"/>
                                 <exclude reference="95J-UT-UWL"/>
                                 <exclude reference="Kbg-7S-pvZ"/>
@@ -210,19 +213,19 @@
                                 <include reference="MHK-UB-byL"/>
                                 <include reference="QXy-W7-dwQ"/>
                                 <include reference="lQP-V5-tsv"/>
-                                <include reference="76P-U7-fGE"/>
-                                <include reference="Je9-GO-UPy"/>
-                                <include reference="dmF-em-HM3"/>
+                                <include reference="2sH-2a-4nE"/>
+                                <include reference="L2B-5B-f45"/>
+                                <include reference="pdv-4D-rfc"/>
                                 <include reference="8hw-Ug-wfI"/>
                                 <include reference="H7C-lf-m7N"/>
                                 <include reference="y81-Bf-wic"/>
+                                <include reference="76P-U7-fGE"/>
+                                <include reference="Je9-GO-UPy"/>
+                                <include reference="dmF-em-HM3"/>
                                 <include reference="2dT-Yx-bj7"/>
                                 <include reference="41M-bI-QoH"/>
                                 <include reference="Ynd-wf-gp0"/>
                                 <include reference="dyL-ch-o4X"/>
-                                <include reference="2sH-2a-4nE"/>
-                                <include reference="L2B-5B-f45"/>
-                                <include reference="pdv-4D-rfc"/>
                                 <include reference="1u5-Co-TeX"/>
                                 <include reference="95J-UT-UWL"/>
                                 <include reference="Kbg-7S-pvZ"/>
@@ -259,10 +262,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellIdentifier" id="VDg-FX-R9e" customClass="QMMovieListTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VDg-FX-R9e" id="fYh-NQ-YPV">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v12-Vr-Q39">
@@ -271,23 +274,23 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tu7-mt-ndh">
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tu7-mt-ndh">
                                             <rect key="frame" x="4" y="2" width="331" height="61"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caq-zS-IRD">
-                                                    <rect key="frame" x="20" y="20" width="77" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caq-zS-IRD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="28" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-SM-7Fo">
-                                                    <rect key="frame" x="128" y="20" width="77" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRx-SM-7Fo">
+                                                    <rect key="frame" x="38" y="0.0" width="38" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVD-Lx-2D2">
-                                                    <rect key="frame" x="234" y="20" width="77" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" ambiguous="YES" misplaced="YES" text="genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVD-Lx-2D2">
+                                                    <rect key="frame" x="86" y="0.0" width="38" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -455,22 +458,22 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="fHo-Ps-8fN"/>
                                 <exclude reference="3cn-xZ-mks"/>
                                 <exclude reference="VaF-Vo-hiX"/>
                                 <exclude reference="bAj-ke-NaU"/>
                                 <exclude reference="TRD-5l-yCK"/>
                                 <exclude reference="VsR-Wz-BMj"/>
+                                <exclude reference="fHo-Ps-8fN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="fHo-Ps-8fN"/>
                                 <include reference="3cn-xZ-mks"/>
                                 <include reference="VaF-Vo-hiX"/>
                                 <include reference="bAj-ke-NaU"/>
                                 <include reference="TRD-5l-yCK"/>
                                 <include reference="VsR-Wz-BMj"/>
+                                <include reference="fHo-Ps-8fN"/>
                             </mask>
                         </variation>
                     </view>
