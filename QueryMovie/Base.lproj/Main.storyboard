@@ -173,7 +173,7 @@
                     <connections>
                         <outlet property="movieTitleTextField" destination="4W9-IX-YCQ" id="VX4-dQ-nAT"/>
                         <outlet property="yearTextField" destination="Bcc-G9-pB8" id="EQb-am-cRa"/>
-                        <segue destination="7nG-Vc-JMK" kind="show" id="iCJ-dE-Yy9"/>
+                        <segue destination="7nG-Vc-JMK" kind="show" identifier="movieListViewSegueIdentifier" id="iCJ-dE-Yy9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
