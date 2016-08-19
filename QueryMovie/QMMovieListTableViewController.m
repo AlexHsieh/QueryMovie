@@ -10,6 +10,7 @@
 #import "QMFunctions.h"
 #import "QMMovieListTableViewCell.h"
 #import "QMMovieDetailViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface QMMovieListTableViewController ()
 @property (nonatomic,strong) NSArray *data;
@@ -21,12 +22,22 @@
     [super viewDidLoad];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50;
+    
+    __weak QMMovieListTableViewController *weakSelf = self;
+    [[[[NSNotificationCenter defaultCenter] rac_addObserverForName:QMNotificationCacheUpdated object:nil]
+      takeUntil:[self rac_willDeallocSignal]]
+     subscribeNext:^(NSNotification *note){
+         weakSelf.data = nil;
+         [weakSelf.tableView reloadData];
+     }];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Table view data source
 
