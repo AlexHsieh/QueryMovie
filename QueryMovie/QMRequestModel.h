@@ -13,6 +13,7 @@
 @property (nonatomic,strong) NSString *query;
 @property (nonatomic,strong) NSString *page;
 @property (nonatomic,strong) NSString *year;
+@property (nonatomic,strong) NSString *genre;
 
 @property (nonatomic,strong) NSString *sortBy;
 @property (nonatomic,strong) NSString *voteCountGreat;
