@@ -92,6 +92,7 @@
     QMRequestModel *rm = [[QMRequestModel alloc]init];
     rm.query = self.movieTitleTextField.text?:@"";
     rm.page = @"1";
+    rm.year = self.yearTextField.text?:nil;
     rm.sortBy = @"vote_average.asc";
     rm.voteCountGreat = @"100";
     
