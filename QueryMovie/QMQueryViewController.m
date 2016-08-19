@@ -134,7 +134,7 @@
         int cy  = [[NSDate fromDateToYear:[NSDate date]] intValue];
         
         NSMutableArray *arr = [NSMutableArray array];
-        for (int i=1960; i<=cy; i++) {
+        for (int i=cy; i>1960; i--) {
             [arr addObject:[NSString stringWithFormat:@"%d",i]];
         }
         _years = arr.copy;
