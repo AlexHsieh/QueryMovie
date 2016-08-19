@@ -79,10 +79,18 @@
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self disbaleAllInterface];
-    [self searchWithCompletion:^(BOOL success, NSError *error) {
+    
+    QMRequestModel *rm = [[QMRequestModel alloc]init];
+    rm.query = self.movieTitleTextField.text?:@"";
+    rm.page = @"1";
+    rm.sortBy = @"vote_average.asc";
+    rm.voteCountGreat = @"100";
+    
+    [[QMFunctions sharedInstance] queryMovieFromCacheThenNetwork:rm completion:^(BOOL isSuccess, NSError *error){
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self enableAllInterface];
     }];
+    
 }
 
 - (void)disbaleAllInterface {
@@ -119,11 +127,6 @@
         _years = arr.copy;
     }
     return _years;
-}
-
-- (void)searchWithCompletion:(void (^)(BOOL success, NSError *error))completion {
-    
-    
 }
 
 
