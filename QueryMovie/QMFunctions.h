@@ -21,10 +21,10 @@ extern NSString *const QMNotificationCacheUpdated;
 + (QMFunctions *)sharedInstance;
 
 
-/** if network sucess, this method will send notifiation
+/** if query server sucess, this method will send notifiation
  * QMNotificationCacheUpdated
  */
-- (void)getMovieFromCacheThenNetwork:(QMRequestModel *)requestModel
+- (void)queryMovieFromCacheThenNetwork:(QMRequestModel *)requestModel
                           completion:(CompletionBlock)completion;
 
 /** This method will return Movies loaded from cache 

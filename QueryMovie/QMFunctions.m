@@ -37,7 +37,7 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
 }
 
 
-- (void)getMovieFromCacheThenNetwork:(QMRequestModel *)requestModel
+- (void)queryMovieFromCacheThenNetwork:(QMRequestModel *)requestModel
                           completion:(CompletionBlock)completion {
     
     self.requestModel = requestModel;
