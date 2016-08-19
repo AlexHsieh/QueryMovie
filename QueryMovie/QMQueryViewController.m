@@ -46,9 +46,11 @@
 
 - (void)initialSetup {
     [self.movieTitleTextField becomeFirstResponder];
-    
+    self.movieTitleTextField.clearButtonMode = UITextFieldViewModeAlways;
     self.yearTextField.inputView = self.picker;
+    self.yearTextField.clearButtonMode = UITextFieldViewModeAlways;
     self.genreTextField.inputView = self.genrePicker;
+    self.genreTextField.clearButtonMode = UITextFieldViewModeAlways;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
