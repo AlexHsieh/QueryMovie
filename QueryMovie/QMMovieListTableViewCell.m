@@ -33,7 +33,7 @@
 
 - (void)setupCell:(QMMovieModel *)model {
     self.nameLabel.text = model.title;
-    self.yearLabel.text = [NSDate fromDateToYear:model.date];
+    self.yearLabel.text = [NSDate fromDateToYear:model.date]?:@"N/A";
     self.ratingLabl.text = [NSString stringWithFormat:@"Rate:%.1f", model.rate];
     if (model.genre.count) {
         __block NSString *g = @"";
@@ -42,6 +42,8 @@
         }];
         g = [g substringFromIndex:2];
         self.genreLabel.text = g;
+    } else {
+        self.genreLabel.text = @"N/A";
     }
 }
 
