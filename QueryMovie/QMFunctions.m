@@ -42,10 +42,7 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
     
     self.requestModel = requestModel;
     
-    // check if there are some data in cache
-    // although data in cache may not what we want
-    // we set 20 for now. We can update this later
-    if (self.cache.count > 20) {
+    if ([self isThereCacheForRequestModel:requestModel]) {
         completion(YES,nil);
     }
     
@@ -80,7 +77,15 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
     }
 }
 
-
+- (BOOL)isThereCacheForRequestModel:(QMRequestModel *)model {
+    //Discovery
+    if (model.query.length == 0 && self.cache.count >= 20) {
+        return YES;
+    }
+    
+    //search
+    return [self getMovies].count?YES:NO;
+}
 
 - (BFTaskCompletionSource *)storeMovieIntoCache:(QMResponseModel *)responseModel {
     BFTaskCompletionSource *completionSource = [BFTaskCompletionSource taskCompletionSource];
