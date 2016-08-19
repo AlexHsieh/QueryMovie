@@ -74,7 +74,7 @@
                                       [source setError:jsonError];
                                       return;
                                   }
-                                NSLog(@"query response = %@",response);
+//                                NSLog(@"query response = %@",response);
                                 [source setResult:response];
                             }failure:^(NSURLSessionDataTask *task, NSError *error) {
                                 NSLog(@"query error = %@",error);
