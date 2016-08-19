@@ -9,15 +9,19 @@
 #import "ViewController.h"
 #import "QMClient.h"
 #import "QMRequestModel.h"
-#import "ViewControllerViewModel.h"
 #import "MBProgressHUD.h"
+#import "QMFunctions.h"
 
 @interface ViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *movieTitleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *yearTextField;
 
-@property (strong,nonatomic) ViewControllerViewModel *viewModel;
 @property (strong,nonatomic) UIPickerView *picker;
+
+/** year from 1960 to now
+ */
+@property (strong,nonatomic) NSArray *years;
+
 @end
 
 @implementation ViewController
@@ -56,16 +60,16 @@
 
 - (NSInteger)pickerView:(UIPickerView *)thePickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return self.viewModel.years.count;
+    return self.years.count;
 }
 - (NSString *)pickerView:(UIPickerView *)thePickerView
              titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return self.viewModel.years[row];
+    return self.years[row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    [self.yearTextField setText:self.viewModel.years[row]];
+    [self.yearTextField setText:self.years[row]];
 }
 
 
@@ -75,10 +79,18 @@
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self disbaleAllInterface];
-    [self.viewModel searchWithCompletion:^(BOOL success, NSError *error) {
+    
+    QMRequestModel *rm = [[QMRequestModel alloc]init];
+    rm.query = self.movieTitleTextField.text?:@"";
+    rm.page = @"1";
+    rm.sortBy = @"vote_average.asc";
+    rm.voteCountGreat = @"100";
+    
+    [[QMFunctions sharedInstance] queryMovieFromCacheThenNetwork:rm completion:^(BOOL isSuccess, NSError *error){
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self enableAllInterface];
     }];
+    
 }
 
 - (void)disbaleAllInterface {
@@ -101,11 +113,21 @@
     return _picker;
 }
 
-- (ViewControllerViewModel *)viewModel {
-    if (!_viewModel) {
-        _viewModel = [[ViewControllerViewModel alloc]init];
+
+- (NSArray *)years {
+    if (!_years) {
+        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy"];
+        int cy  = [[formatter stringFromDate:[NSDate date]] intValue];
+        
+        NSMutableArray *arr = [NSMutableArray array];
+        for (int i=1960; i<=cy; i++) {
+            [arr addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+        _years = arr.copy;
     }
-    return _viewModel;
+    return _years;
 }
+
 
 @end

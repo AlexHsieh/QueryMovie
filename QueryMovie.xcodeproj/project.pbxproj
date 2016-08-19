@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2CC5B5A01C7D8926EB9D0839 /* Pods_QueryMovieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DD70C4BB4175038980620C /* Pods_QueryMovieUITests.framework */; };
 		48DFCF9DA97D908E24B048F6 /* Pods_QueryMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FA8C8393B3686B8E650800 /* Pods_QueryMovieTests.framework */; };
-		8B043FAD1D65D62400146137 /* ViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B043FAC1D65D62400146137 /* ViewControllerViewModel.m */; };
 		8B043FB01D65E7E000146137 /* QMFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B043FAF1D65E7E000146137 /* QMFunctions.m */; };
 		8B043FB31D65FC7000146137 /* JSONModel+QueryMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B043FB21D65FC7000146137 /* JSONModel+QueryMovie.m */; };
 		8B3AD3781D655E73000F6CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3771D655E73000F6CC0 /* main.m */; };
@@ -52,8 +51,6 @@
 		64AF1D4F487C373F68464F93 /* Pods_QueryMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueryMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7802728C5DB5E75DA89FA7E6 /* Pods-QueryMovieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueryMovieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QueryMovieUITests/Pods-QueryMovieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7FF0A9C5645B17FE5E0CE242 /* Pods-QueryMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueryMovieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QueryMovieUITests/Pods-QueryMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B043FAB1D65D62400146137 /* ViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerViewModel.h; sourceTree = "<group>"; };
-		8B043FAC1D65D62400146137 /* ViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerViewModel.m; sourceTree = "<group>"; };
 		8B043FAE1D65E7E000146137 /* QMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMFunctions.h; sourceTree = "<group>"; };
 		8B043FAF1D65E7E000146137 /* QMFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMFunctions.m; sourceTree = "<group>"; };
 		8B043FB11D65FC7000146137 /* JSONModel+QueryMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+QueryMovie.h"; sourceTree = "<group>"; };
@@ -210,8 +207,6 @@
 			children = (
 				8B3AD37C1D655E73000F6CC0 /* ViewController.h */,
 				8B3AD37D1D655E73000F6CC0 /* ViewController.m */,
-				8B043FAB1D65D62400146137 /* ViewControllerViewModel.h */,
-				8B043FAC1D65D62400146137 /* ViewControllerViewModel.m */,
 			);
 			name = "VM&VC";
 			sourceTree = "<group>";
@@ -501,7 +496,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B043FB01D65E7E000146137 /* QMFunctions.m in Sources */,
-				8B043FAD1D65D62400146137 /* ViewControllerViewModel.m in Sources */,
 				8B3AD37E1D655E73000F6CC0 /* ViewController.m in Sources */,
 				8B3AD37B1D655E73000F6CC0 /* AppDelegate.m in Sources */,
 				8B3AD3B11D65B10B000F6CC0 /* QMResponseModel.m in Sources */,
