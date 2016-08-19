@@ -73,6 +73,13 @@
 }
 
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //should do compare segue identifier here. Since only one segue. just skip..
+    
+}
+
 #pragma mark - Action
 
 - (IBAction)searchButtonClicked:(id)sender {
@@ -89,6 +96,9 @@
     [[QMFunctions sharedInstance] queryMovieFromCacheThenNetwork:rm completion:^(BOOL isSuccess, NSError *error){
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self enableAllInterface];
+        if (isSuccess) {
+            [self performSegueWithIdentifier:@"movieListViewSegueIdentifier" sender:self];
+        }
     }];
     
 }
