@@ -11,7 +11,7 @@
 #import "QMRequestModel.h"
 #import "QMMovieModel.h"
 #import "QMResponseModel.h"
-
+#import "NSDate+NSString.h"
 
 NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
 
@@ -131,10 +131,8 @@ NSString *const QMNotificationCacheUpdated = @"QMNotificationCacheUpdated";
     }
     
     NSMutableArray *filterMovies = [NSMutableArray array];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy"];
     for (QMMovieModel *mm in movies) {
-        NSString *year = [dateFormatter stringFromDate:mm.date];
+        NSString *year = [NSDate fromDateToYear:mm.date];
         if ([year isEqualToString:self.requestModel.year]) {
             [filterMovies addObject:mm];
         }

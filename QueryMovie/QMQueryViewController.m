@@ -11,6 +11,7 @@
 #import "QMRequestModel.h"
 #import "MBProgressHUD.h"
 #import "QMFunctions.h"
+#import "NSDate+NSString.h"
 
 @interface QMQueryViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *movieTitleTextField;
@@ -130,9 +131,7 @@
 
 - (NSArray *)years {
     if (!_years) {
-        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-        [formatter setDateFormat:@"yyyy"];
-        int cy  = [[formatter stringFromDate:[NSDate date]] intValue];
+        int cy  = [[NSDate fromDateToYear:[NSDate date]] intValue];
         
         NSMutableArray *arr = [NSMutableArray array];
         for (int i=1960; i<=cy; i++) {

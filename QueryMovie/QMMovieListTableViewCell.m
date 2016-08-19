@@ -8,6 +8,7 @@
 
 #import "QMMovieListTableViewCell.h"
 #import "QMMovieModel.h"
+#import "NSDate+NSString.h"
 
 @interface QMMovieListTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -30,9 +31,7 @@
 
 - (void)setupCell:(QMMovieModel *)model {
     self.nameLabel.text = model.title;
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy"];
-    self.yearLabel.text = [dateFormatter stringFromDate:model.date];
+    self.yearLabel.text = [NSDate fromDateToYear:model.date];
     self.ratingLabl.text = [NSString stringWithFormat:@"Rate:%.1f", model.rate];
 }
 

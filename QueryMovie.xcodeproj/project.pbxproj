@@ -14,6 +14,7 @@
 		8B37DDD61D66EC2A00AB8BB5 /* QMMovieListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DDD51D66EC2A00AB8BB5 /* QMMovieListTableViewController.m */; };
 		8B37DDD91D66F0DD00AB8BB5 /* QMMovieListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DDD81D66F0DD00AB8BB5 /* QMMovieListTableViewCell.m */; };
 		8B37DDDC1D66FDE800AB8BB5 /* QMMovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DDDB1D66FDE800AB8BB5 /* QMMovieDetailViewController.m */; };
+		8B37DDDF1D6728C000AB8BB5 /* NSDate+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37DDDE1D6728C000AB8BB5 /* NSDate+NSString.m */; };
 		8B3AD3781D655E73000F6CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD3771D655E73000F6CC0 /* main.m */; };
 		8B3AD37B1D655E73000F6CC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD37A1D655E73000F6CC0 /* AppDelegate.m */; };
 		8B3AD37E1D655E73000F6CC0 /* QMQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3AD37D1D655E73000F6CC0 /* QMQueryViewController.m */; };
@@ -64,6 +65,8 @@
 		8B37DDD81D66F0DD00AB8BB5 /* QMMovieListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMovieListTableViewCell.m; sourceTree = "<group>"; };
 		8B37DDDA1D66FDE800AB8BB5 /* QMMovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMovieDetailViewController.h; sourceTree = "<group>"; };
 		8B37DDDB1D66FDE800AB8BB5 /* QMMovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMovieDetailViewController.m; sourceTree = "<group>"; };
+		8B37DDDD1D6728C000AB8BB5 /* NSDate+NSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NSString.h"; sourceTree = "<group>"; };
+		8B37DDDE1D6728C000AB8BB5 /* NSDate+NSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NSString.m"; sourceTree = "<group>"; };
 		8B3AD3731D655E73000F6CC0 /* QueryMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueryMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3AD3771D655E73000F6CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B3AD3791D655E73000F6CC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 				8B043FAF1D65E7E000146137 /* QMFunctions.m */,
 				8B043FB11D65FC7000146137 /* JSONModel+QueryMovie.h */,
 				8B043FB21D65FC7000146137 /* JSONModel+QueryMovie.m */,
+				8B37DDDD1D6728C000AB8BB5 /* NSDate+NSString.h */,
+				8B37DDDE1D6728C000AB8BB5 /* NSDate+NSString.m */,
 			);
 			name = Gloabl;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				8B3AD3781D655E73000F6CC0 /* main.m in Sources */,
 				8B043FB31D65FC7000146137 /* JSONModel+QueryMovie.m in Sources */,
 				8B37DDD91D66F0DD00AB8BB5 /* QMMovieListTableViewCell.m in Sources */,
+				8B37DDDF1D6728C000AB8BB5 /* NSDate+NSString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
