@@ -27,5 +27,9 @@ extern NSString *const QMNotificationCacheUpdated;
 - (void)getMovieFromCacheThenNetwork:(QMRequestModel *)requestModel
                           completion:(CompletionBlock)completion;
 
+/** This method will return Movies loaded from cache 
+ * and filtered and sorted based on requestModel
+ */
+- (NSArray *)getMovies;
 
 @end
